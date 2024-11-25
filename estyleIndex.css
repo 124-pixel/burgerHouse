@@ -1,0 +1,1620 @@
+@font-face {
+    font-family: 'LuloCleanBold';
+    src: url('/fonts/FontsFree-Net-Lulo-Clean-W01-One-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --color1: #ae9a64;
+    --color2: #323232;
+    --color3: #FFFFFF;
+    --color4: #28a745;
+    --color5: #c82b2b;
+    --color6: #FFB936;
+    --color7: #EC3D08;
+    --color8: #f7f7f7;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color3);
+
+}
+
+
+.header {
+    background-image: url('galery/darker_poslogo.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+    background-attachment: fixed;
+    height: 65rem;
+    /* Hace que la imagen de fondo se quede fija */
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #af9b62;
+    padding: 20px 50px;
+    font-size: 10.5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    transition: top 0.3s ease;
+    z-index: 3;
+    height: 30px;
+    margin-top: 1.7rem;
+}
+
+/* Estilos del logo y nombre de la web */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 30px;
+    /* Ajusta el tamaño del logo según tus preferencias */
+}
+
+.logo .site-name {
+    font-size: 12px;
+    font-family: 'LuloCleanBold';
+    letter-spacing: -0.1rem;
+    color: #333333;
+    margin-left: 6px;
+    /* Espacio entre el logo y el nombre */
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    gap: 0.6rem;
+}
+
+.navbar ul li {
+    margin-right: 23px;
+    font-family: 'LuloCleanBold';
+    font-size: 10px;
+    max-width: 640px;
+}
+
+.navbar ul li a {
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar-toggle{
+    display: none;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+
+
+.login a {
+    color: #333333;
+    text-decoration: none;
+    font-family: 'LuloCleanBold';
+    font-size: 0.6rem;
+    margin-right: 100px;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.login a:hover {
+    color: #FFFFFF;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+
+    .navbar ul {
+        justify-content: space-between; /* Ajusta la separación entre los elementos */
+        font-size: 12px; /* Aumenta un poco el tamaño del texto */
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .navbar{
+        width: 76.1%;
+        position: fixed;
+        top: 1rem;
+        left: 0;
+    }
+
+    .navbar-toggle{
+        background-color: transparent;
+        color: var(--color2);
+        font-size: 20px;
+        border: none;
+        cursor: pointer;
+        display: block;
+    }
+    .navbar ul {
+        display: none;
+    }
+
+    .login {
+        display: none;
+    }
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #af9b62;
+        text-align: center;
+        padding: 10px 0;
+    }
+    
+    .navbar-menu.open {
+        display: flex;
+    }
+    .logo{
+        margin: 0px -25px;
+    }
+}
+
+
+
+.hero {
+    padding: 300px 0px;
+    text-align: left;
+    /* Alinea el texto hacia la izquierda */
+}
+
+.hero h1 {
+    font-size: 110px;
+    margin: 0 140px;
+    font-weight: 580;
+    font-family: 'LuloCleanBold';
+    text-align: center right;
+    /* Alinea el h1 hacia la izquierda */
+}
+
+.hero p {
+    font-size: 16px;
+    margin: 30px 140px;
+    font-weight: 900;
+    margin-top: 0.4rem;
+    max-width: 550px;
+    text-align: start;
+    font-family: 'LuloCleanBold';
+}
+
+.btn {
+    display: inline-block;
+    padding: 9px 50px;
+    background-color: #ae9a64;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px 140px;
+    /* Alinea el botón hacia la izquierda */
+    font-family: 'LuloCleanBold';
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px) {
+
+    .hero h1{
+        text-align: center;
+    }
+    .hero p{
+        text-align: center;
+        margin-left: 230px;
+    }
+    .btn{
+        margin: 0px 420px;
+    }
+}
+
+@media (max-width: 768px){
+    .header{
+        width: 99.5%;
+        height: 20%;
+    }
+    .hero{
+        width: 100%;
+    }
+    .hero h1{
+        text-align: center;
+        font-size: 3rem;
+        margin: 0px auto;
+    }
+    .hero p{
+        text-align: center;
+        margin-left: 8rem;
+        font-size: 0.5rem;
+    }
+    .btn{
+        font-size: 0.6rem;
+        padding: 10px 15px;
+        margin: 0px 180px;
+    }
+}
+
+.espacio {
+    background-color: rgb(49, 49, 49);
+    padding: 5.5px 50px;
+    font-size: 15px;
+    font-family: 'Georgia', 'Palatino', 'Book Antiqua', serif;
+    color: var(--color1);
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+
+}
+
+.espacio a {
+    text-decoration: none;
+    color: var(--color1);
+}
+
+.espacio span {
+    margin-right: 3.5;
+}
+
+@media (max-width: 768px) {
+    .espacio{
+        width: 76.1%;
+        height: 2rem;
+        z-index: 3;
+        position: fixed;
+    }
+    .espacio span{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+} 
+
+
+
+/* Imagen de separación */
+.division-rara {
+    position: relative; /* Usa relative si la imagen debe fluir en el diseño */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    margin-top: -5rem; /* Ajusta este valor para superponer la imagen */
+    overflow: hidden; /* Esconde cualquier contenido que exceda los límites */
+}
+
+.division-rara img {
+    width: 100%; /* Ajusta automáticamente el ancho de la imagen */
+    max-width: none; /* Elimina cualquier restricción previa */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+@media (max-width: 768px) {
+    .division-rara img{
+        z-index: 1;
+        margin-top: 3.8rem;
+        width: 99%;
+    }
+}
+/*section video*/
+.section-video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50rem;
+    
+}
+
+.text-video {
+    color: black;
+    max-width: 700px;
+    margin: 50px;
+    padding: 40px;
+    background-color: #FFFFFF;
+    width: 50rem;
+    height: 20rem;
+    box-shadow: 0 10px 10px rgb(196, 188, 174);
+}
+
+.text-video h1 {
+    font-family: 'LuloCleanBold';
+    font-size: 50px;
+    margin-top: -5px;
+}
+
+.text-video p {
+    font-size: 17px;
+    font-family: 'Georgia', 'Palatino', 'Book Antiqua', serif;
+}
+
+.video video {
+    width: 930px;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px) {
+    .section-video{
+        justify-content: center;
+    }
+    .text-video{
+        margin-left: 110px;
+    }
+    .video{
+        margin-left: 100px;
+    }
+    .video video{
+        width: 800px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-video{
+        width: 97%;
+        height: 100%;
+        flex-wrap: wrap;
+    }
+    .text-video{
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        text-align: center;
+        max-width: 70%;
+        
+    }
+    .text-video h1{
+        object-fit: contain;
+        font-size:1.6rem;
+    }
+    .video video{
+        margin: 0px 11px;
+        width: 95%;
+    }
+}
+
+/*div separacion color*/
+.cinta-separacion{
+    background-color: var(--color5);
+    height: 76px;
+    margin-top: 60px;
+}
+.text-separacion {
+    text-align: center;
+    font-family: 'LuloCleanBold';
+    padding: 1px 0px;
+    white-space: nowrap; /* Evita que el texto se divida en líneas */
+    overflow: hidden; /* Oculta cualquier texto que salga del contenedor */
+}
+
+
+@media screen and (min-width: 834px) and (max-width: 1366px) {
+    .cinta-separacion{
+        height: 7rem;
+    }
+}
+
+@media (max-width: 768px){
+    .cinta-separacion{
+        width: 27rem;
+    }
+}
+
+/*div division*/
+.division {
+    background-color: var(--color8) ;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente */
+    position: relative;
+    /* Necesario para que el pseudo-elemento se posicione en relación con .division */
+}
+
+
+.division h2 {
+    color: var(--color2);
+    font-size: 30px;
+    font-family: 'LuloCleanBold', sans-serif;
+
+}
+@media (max-width: 768px){
+    .division{
+        height: 100%;
+        text-align: center;
+    }
+}
+.tomate-division{
+    position: relative;
+}
+.tomate-division img{
+    position: absolute;
+    right:  90%;
+    top: -9rem;
+}
+
+.tomate-division-left{
+    position: relative;
+}
+.tomate-division-left img{
+    position: absolute;
+    left:  90%;
+    top: -9rem;
+}
+
+
+
+/*section combo*/
+.section-combo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color8) ;
+    height: 30rem;
+}
+
+.image-combo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: relative;
+}
+
+.combo-item {
+    position: relative;
+    display: inline-block;
+}
+
+.combo-item img {
+    height: 350px;
+    /* Ajusta el tamaño a tus necesidades */
+    width: 590px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.combo-text {
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    /* Cambié 'right' a 'left' para más control sobre el flujo del texto */
+    color: white;
+    font-size: 25px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-align: left;
+    /* Cambié el texto a la izquierda para mejorar el ajuste */
+    max-width: 220px;
+    /* Establece el máximo ancho del contenedor de texto */
+}
+
+.combo-text h1 {
+    font-size: 27px;
+    max-width: 100%;
+    /* Asegura que el h1 no supere el contenedor */
+    font-family: 'LuloCleanBold';
+}
+
+.combo-text h2 {
+    font-size: 20px;
+    color: #FFFFFF;
+    margin-top: -7px;
+}
+
+.combo-text p {
+    font-size: 12px;
+    padding: 10px 0px;
+    font-weight: normal;
+    margin-top: -10px;
+}
+
+.btn-combo {
+    border: none;
+    background-color: #c82b2b;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px) {
+    .section-combo{
+        height: 100%;
+        width: 100%;
+    }
+
+    .image-combo{
+        flex-wrap: wrap;
+    }
+
+}
+@media (max-width: 768px){
+    .section-combo{
+        height: 100%;
+        width: 100%;
+    }
+    .image-combo{
+        flex-wrap: wrap;
+    }
+    .combo-item img{
+        justify-content: center;
+        margin: 0px auto;
+        display: flex;
+        width: 23rem;
+        margin-left: -1rem;
+    }
+}
+
+
+/*section mini menu*/
+.mini-menu {
+    padding: 50px 67px;
+    background-color: var(--color8);
+    text-align: center;
+    height: 40rem;
+}
+
+.title-menu {
+    font-family: 'LuloCleanBold';
+    color: var(--color2);
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+.info-container-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.info-box {
+    text-align: center;
+    width: 300px;
+    height: 25rem;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+
+}
+
+.info-box img {
+    height: 190px;
+    width: 220px;
+    background-color: rgb(196, 188, 174);
+    border-radius: 10px;
+    padding: 10px 35px;
+    margin: 3px 4px;
+    transition: 0.5s;
+}
+
+.info-box img:hover {
+    background: var(--color5);
+}
+
+.info-box h4 {
+    margin: 10px 10px;
+    text-align: left;
+    margin-top: 20px;
+    color: #323232;
+    font-family: 'LuloCleanBold';
+    font-size: 13px;
+}
+
+.mini-menu p {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    text-align: left;
+    margin: 10px 10px;
+    line-height: 20px;
+}
+
+.mini-menu h3 {
+    font-size: 13px;
+    text-align: left;
+    margin: 10px 10px;
+    color: red;
+    margin: 30px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.btn-menu {
+    margin: 10px 0;
+    /* Controla el margen superior e inferior */
+    padding: 10px 20px;
+    background-color: var(--color5);
+    /* Puedes personalizar el color del botón */
+    color: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    /* Permite posicionar el botón dentro del contenedor */
+    bottom: 20px;
+    /* Ajusta la posición inferior del botón */
+    left: 65%;
+    /* Posiciona el botón horizontalmente */
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+    .title-menu{
+        font-size: 26px;
+    }
+    .mini-menu{
+        height: 100%;
+    }
+    .info-container-menu{
+       flex-wrap: wrap;
+       gap: 20px;
+    }
+}
+@media (max-width: 768px){
+        .mini-menu{
+            height: 100%;
+            width: 68.5%;
+        }
+        .tomate-division img{
+            width: 5rem;
+            padding: 30px;
+        }
+        .tomate-division-left img{
+            width: 3rem;
+            padding: 70px 10px;
+        }
+        .info-container-menu{
+            flex-wrap: wrap;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+        }
+        .info-box{
+            margin-right: 1rem;
+        }
+}
+/*section highlight*/
+.highlight-section {
+    background-color: #f8f9fa;
+    /* Fondo claro para que resalte la sección */
+    padding: 0;
+    /* Eliminamos el padding para que la imagen se ajuste */
+}
+
+.highlight-content {
+    display: flex;
+    justify-content: space-between;
+    height: 30rem;
+}
+
+.highlight-image {
+    flex: 1;
+    overflow: hidden;
+    /* Para que la imagen no se desborde */
+    height: 40rem;
+}
+
+.highlight-image img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    /* Hace que la imagen ocupe todo el espacio de su contenedor sin deformarse */
+}
+
+.highlight-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    background-color: #FFFFFF;
+    /* Un color de fondo llamativo para la parte del texto */
+    color: #323232;
+    height: 412px;
+}
+
+.highlight-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 200px;
+    margin: 0 10px auto;
+    font-family: 'LuloCleanBold';
+    /* Fuente personalizada */
+}
+
+.highlight-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    font-family: Arial, sans-serif;
+    margin-bottom: 4rem;
+}
+
+@media (max-width: 768px){
+    .highlight-content {
+        flex-direction: column; /* Cambia la dirección del contenido a columna */
+        align-items: center;   /* Centra el contenido en el eje principal */
+        height: 100%;        /* Permite que la altura se ajuste automáticamente */
+        width: 100%;
+    }
+    .highlight-image img{
+            height: 22rem;
+    }
+    .highlight-text{
+        width: 20rem;
+    }
+    .highlight-text h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .highlight-text p{
+        text-align: center;
+    }
+}
+
+/*section chef*/
+.culinary-masters {
+    text-align: center;
+    padding: 50px 0;
+    background-color: var(--color8);
+    height: 52rem;
+}
+
+.culinary-masters h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #323232;
+    font-family: 'LuloCleanBold';
+    margin-top: 50px;
+}
+
+.chef-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 70px;
+
+}
+
+
+.chef-card img {
+    width: 349px;
+    height: 550px;
+    object-fit: cover;
+}
+
+.chef-text {
+    font-size: 14px;
+    margin-top: 15px;
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #323232;
+    margin: -4px 0.5px;
+    padding: 1px;
+}
+.image-video{
+    position: relative;
+    
+}
+.image-video img{
+    position: absolute;
+    padding: 250px 0px;
+    left: 85%;
+    top: -10rem;
+}
+.image-video-rigth{
+    position: relative;
+}
+.image-video-rigth img{
+    position: absolute;
+    padding: 250px 0px;
+    right: 87%;
+    top: 10rem;
+}
+
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+    .culinary-masters{
+        height: 100%;
+        width: 100%;
+    }
+    .chef-cards{
+        flex-wrap: wrap;
+    }
+    .image-video img{
+        padding: 1300px 0px;
+        position: absolute;
+        margin-left: -10rem;
+    }
+    .image-video-rigth img{
+        position: absolute;
+        margin-right: -10rem;
+        padding: 600px 0px;
+    }
+}
+
+@media (max-width: 768px){
+    .culinary-masters {
+        justify-content: center;
+        height: 100%;
+    }
+    .culinary-masters h1{
+        font-size: 2rem;
+    }
+    .image-video img{
+        height: 3.2rem;
+        padding: 90px 0px;
+    }
+    .image-video-rigth img{
+        height: 3rem;
+        padding: 27rem 0px;
+    }
+    .chef-cards {
+        flex-wrap: wrap;
+    }
+    .chef-cards img{
+        height: auto;
+    }
+}
+/*section promociones*/
+.special-burger-section {
+    background-color: #000;
+    color: #fff;
+    padding: 50px 20px;
+    position: relative;
+    height: 50rem;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Para que sea responsive */
+
+  }
+  
+  .text-content {
+    max-width: 50%;
+    margin-top: 4rem;
+  }
+  
+   .title-image {
+    width: 100%;
+    max-width: 500px; /* Ajusta el tamaño del título */
+    margin-left: 17rem;
+  }
+
+  .text-content h2 {
+    font-size: 3rem;
+        align-items: center;
+        text-align: center;
+    color: #FFC107;
+    margin-left: 11rem;
+
+    font-family: 'LuloCleanBold';
+  }
+
+  .text-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    margin-left: 17rem;
+    text-align: center  ;
+    max-width: 500px;
+    font-family: 'LuloCleanBold';
+  }
+  
+  .countdown {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .countdown{
+    margin-left: 11rem;
+    padding: 1rem;
+  }
+  
+  .countdown-item {
+    background-color: #FF5722;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    flex: 1; /* Todos los contenedores tendrán el mismo ancho */
+    
+  }
+  
+  .countdown-item span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'LuloCleanBold';
+  }
+  
+
+  
+  .order-now-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-left: 28rem;
+  }
+  
+  .order-now-btn:hover {
+    background-color: #fff;
+    color: #000;
+  }
+  
+  .image-content {
+    position: relative;
+    max-width: 40%;
+    text-align: center;
+  }
+  
+  .burger-image {
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  @media (max-width: 768px) {
+    .special-burger-section{
+        height: 80rem;
+        width: 90.7%;
+    }
+    .title-image {
+       margin-left: 3rem;
+       width: 19rem;
+    }
+    .text-content h2{
+        text-align: center;
+        display: flex;
+        margin-left: 4rem;
+        font-size: 2rem;
+    }
+    .text-content p{
+        display: flex;
+        text-align: center;
+        font-size: 0.7rem;
+        margin-left: 9rem;
+    }
+    .countdown {
+        display: grid; /* Cambia a grid para organizar en filas y columnas */
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+        gap: 20px; /* Espaciado entre filas y columnas */
+        margin-left: 3rem;
+      }
+      .countdown-item{
+        width: 100px;
+        font-family: 'LuloCleanBold';
+        font-size: 10px;
+      }
+      .image-content {
+        top: 40rem;
+        right: 7rem;
+      }
+      .burger-image {
+        width: 20rem;
+        margin-left: -5rem;
+      }
+      .order-now-btn{
+        margin-left: 8rem;
+        width: 65%;
+      }
+
+}
+
+/*div division rara promo*/
+.division-rara-promo {
+    position: absolute;
+    margin-top: -4.5rem;
+    z-index: 0;
+    width: 100vw;
+    max-width: 1864px;
+    /* Ajusta este valor a tus necesidades */
+    justify-content: center;
+    align-items: center;
+}
+
+.division-rara-promo img {
+    width: 100%;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+    .division-rara-promo{
+        width: 100%;
+    }
+    .division-rara-promo img{
+        width:100%;
+        margin-top: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .division-rara-promo{
+        margin-top: -1rem;
+    }
+}
+
+/*section de somos*/
+.somos {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    height: 28rem;
+}
+
+/* Contenedor de texto */
+.somo-text {
+    max-width: 900px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+    margin-top: 5rem;
+}
+
+/* Logo de hamburguesa */
+.somoslogo img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.somo-text h2 {
+    color: #eab71a;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+    margin: 0;
+}
+
+/* Descripción */
+.somo-text p {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #c42900;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    margin: 13px 0 0 0;
+    max-width: 100rem;
+}
+
+/* Imagen de fondo decorativa */
+.background-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    /* Ajusta la opacidad si deseas un efecto de fondo */
+    z-index: 0;
+}
+@media screen and (min-width: 834px) and (max-width: 1366px){
+     .somos{
+        height: 30rem;
+        width: 95%;
+     }
+     .somo-text{
+        margin-top: -2rem;
+        max-width: 70%;
+     }
+     .background-image img{
+        height: 100%;
+        object-fit: cover;
+     }
+}
+
+@media (max-width: 768px){
+    .somos{
+        height:38rem;
+        z-index: 0;
+    }
+    .background-image img{
+        object-fit: cover;
+        height: 100%;
+    }
+    .somo-text{
+        margin-top: -0.1rem;
+    }
+    .somo-text p{
+        
+        font-size: 2rem;
+    }
+
+}
+
+
+
+
+/*section de delivery*/
+.delivery-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+    height: 30rem;
+  }
+  
+ .content {
+    max-width: 600px;
+  }
+  
+  .delivery-section h3 {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'LuloCleanBold';
+  }
+  
+  .delivery-section h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+    font-family: 'LuloCleanBold';
+  }
+  
+  .delivery-section p {
+    margin: 20px 0;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  .delivery-section button {
+    padding: 10px 20px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+button:hover {
+    background-color: #fff;
+    color: #111;
+  }
+  
+ .image-container {
+    max-width: 400px;
+  }
+  
+.image-container img {
+    width: 130%;
+    height: auto;
+  }
+  
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+    .deliveryburger{
+        margin-top: 1rem;
+    }
+    .text-delivery h1{
+        font-size: 20px;
+        margin: 0px -100px;
+    }
+    .text-delivery p{
+        font-size: 22px ;
+        margin: 0px -100px;
+    }
+    .descripcion-delivery p{
+        max-width: 400px;
+        font-size: 14px;
+        margin: 0px -100px;
+        padding: 30px 0px;
+    }
+    .buton-delivery{
+        padding: 8px;
+        margin: 0px -100px;
+    }
+
+}
+@media (max-width: 768px){
+    .delivery-section{
+        height: 65rem;
+        flex-direction: column;
+    }
+    .image-container{
+        width: 80%;
+        margin-left: -5rem;
+    }
+    .content{
+        text-align: center;
+    }
+    
+}
+
+.image-rigth{
+    position: relative;
+}
+.image-rigth img{
+    position: absolute;
+    left: 4%;
+}
+.image-left{
+    position: relative;
+}
+.image-left img{
+    position: absolute;
+    right: 3%;
+}
+.suscri{
+    height: 15rem;
+}
+.newsletter-section {
+    background-color: var(--color2); /* Color de fondo amarillo */
+    padding: 30px 40px;
+    width: 55%;
+    margin: 80px auto;
+  }
+
+  
+  .newsletter-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .newsletter-content h2 {
+    font-size: 24px;
+    margin: 0;
+    color: var(--color3); /* Color de texto negro */
+    font-family: 'LuloCleanBold';
+    max-width: 500px;
+  }
+  
+  .newsletter-content p {
+    font-size: 16px;
+    font-family: 'Georgia', 'Palatino', 'Book Antiqua', serif;
+    margin: 5px 0 0;
+    color: var(--color3);
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .newsletter-form input{
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    width: 300px; /* Ajusta el ancho del campo de entrada */
+    background-color: #f5f5f5;
+  }
+  
+  .newsletter-form button {
+    background-color: var(--color3); /* Color rojo oscuro */
+    color: var(--color2);
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 1px solid var(--color2);    
+    cursor: pointer;
+  }
+  @media screen and (min-width: 834px) and (max-width: 1366px){
+    .suscri{
+        height: 100%;
+    }
+    .image-rigth img{
+        padding: 40px 0px;
+    }
+    .image-left img{
+        padding: 40px 0px;
+    }
+    .newsletter-container{
+        justify-content: center;
+        align-items: center;
+    }
+    .newsletter-content h2{
+        margin: 0px 145px;
+    }
+    .newsletter-content p{
+        margin: 0px 160px;
+        padding: 10px 0px;
+    }
+
+  }
+
+  @media (max-width: 768px){
+    .suscri{
+        height: 100%;
+        width: 100%;
+    }
+    .newsletter-content{
+       text-align: center;
+        height: 10rem;
+ 
+    }
+    .newsletter-form{
+        
+        flex-direction: column;
+        width: 16rem;
+    }
+    .newsletter-form input{
+        width: 14rem;
+    }
+  }
+
+
+/*section de galeria*/
+.gallery-section {
+    padding: 10px 0px;
+    text-align: center;
+    background-color: var(--color8);
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: var(--color2);
+    margin-bottom: 40px;
+    font-family: 'LuloCleanBold';
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 4fr);
+    gap: 10px;
+}
+
+.gallery-item {
+    position: relative;
+    width: 91%;
+    padding-bottom: 90%;
+    justify-content: center;
+    align-items: center;
+    padding: 220px 10px;
+    object-fit: cover;
+}
+
+.gallery-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85%;
+    height: 85%;
+    margin-left: 50px;
+    object-fit: cover;
+    display: block;
+    transition: 0.5s;
+}
+
+/* Efecto de oscurecimiento y escalado en hover */
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(50%);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Estilos para el texto de la superposición */
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    text-align: center;
+    pointer-events: none;
+}
+
+.gallery-item:hover .overlay-text {
+    opacity: 1;
+}
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+    .gallery-grid{
+        margin-right: 3rem;
+    }
+}
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr); /* Dos columnas en pantallas pequeñas */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .gallery-grid img{
+        margin-left: 2.5rem;
+    }
+}
+
+/*section footer*/
+.footer {
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url('galery/4.png');
+    height: 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ajusta la imagen de fondo para que cubra el área */
+    color: white;
+    overflow: hidden;
+    /* Evita que el contenido salga del footer */
+}
+
+/* Capa de color encima del fondo */
+.footer .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 24, 29, 0.904);
+    /* Color y opacidad de la capa */
+    z-index: 1;
+    /* Ubica la capa encima de la imagen de fondo */
+}
+
+.text-footer {
+    position: relative;
+    z-index: 2;
+    /* Coloca el contenido sobre la capa */
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    padding: 40px;
+}
+
+.text-footer h1 {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contac a {
+    text-decoration: none;
+    color: #ffffffb6;
+    /* Cambia el color del texto para que sea visible sobre el fondo oscuro */
+    transition: color 0.3s ease;
+}
+
+.contac a:hover {
+    color: #FFFFFF;
+}
+
+
+.title-footer-logo {
+    display: flex;
+    padding: 0px 70px;
+    margin-top: -26px;
+    line-height: 30px;
+}
+
+.icon {
+    font-size: 20px;
+    margin: 15px;
+    padding: 10px 10px;
+    color: #ffffff8a;
+    border: 1px solid #ffffff8a;
+    border-radius: 50%;
+    transition: color 1s ease;
+    text-decoration: none;
+}
+
+.icon:hover {
+    background-color: #FFFFFF;
+    color: black;
+
+}
+
+.salud {
+    font-weight: bold;
+}
+
+.descrip-footer {
+    color: #FFFFFF;
+    max-width: 450px;
+    margin-right: 250px;
+}
+
+.descrip-footer img {
+    width: 50px;
+}
+
+
+@media screen and (min-width: 834px) and (max-width: 1366px){
+.title-footer-logo{
+    margin-top: -60px;
+}
+        
+    }
+    @media (max-width: 768px){
+        .footer{
+            height: 100%;
+
+            z-index: 0;
+        }
+        .text-footer{
+            text-align: center;
+            flex-wrap: wrap;
+        }
+        .descrip-footer img{
+            margin-left:1rem;
+
+        }
+        .descrip-footer{
+            margin-left: 15rem;
+            
+        }
+        .title-footer-logo{
+            margin-left: 1rem;
+            margin-top: 1rem;
+        }
+
+    }
+
+
+/*scroll*/
+.scroll-container {
+    padding: 10px;
+    position: fixed;
+    border: none;
+    left: 95%;
+    top: 91%;
+    z-index: 1000;
+    display: none;
+}
+.scroll-container button {
+    background-color: var(--color5);
+    color: var(--color3);
+    border-radius: 60%;
+    font-size: 30px;
+    border: 2px solid var(--color5);
+    cursor: pointer;
+}
+
+
+@media (max-width: 768px){
+    .scroll-container{
+        left: 67%;
+    }
+}
+
